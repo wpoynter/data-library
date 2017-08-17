@@ -1,0 +1,26 @@
+.closer-bg-pink {
+  background-color: #ec008b;
+}
+
+.closer-bg-dark {
+  background-color: #3e3e49;
+}
+
+.navbar-dark a {
+  color: #eee;
+}
+
+nav.sidebar {
+  border-right: 3px solid #5e5e69;
+}
+
+nav.sidebar h4 {
+  font-size: 1.4rem;
+  background: #5e5e69;
+  padding-left: 30px;
+  margin-left: -15px;
+  margin-right: -15px;
+  color: #eee;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

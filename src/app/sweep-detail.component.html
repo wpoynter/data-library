@@ -1,0 +1,45 @@
+<div *ngIf="sweep">
+  <h2>{{sweep.title}}</h2>
+  <div>{{sweep.desc}}</div>
+  <ngb-tabset>
+    <ngb-tab title="{{dataset.title | datasetTitle}}" *ngFor="let dataset of sweep.datasets">
+      <ng-template ngbTabContent>
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Label</th>
+              <th>Valid</th>
+              <th>Invalid</th>
+              <th>Min</th>
+              <th>Max</th>
+              <th>Mean</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let variable of dataset.variables">
+              <tr>
+                <td>
+                  <button class="btn btn-link" (click)="onSelect(variable)">
+                    {{variable.name}}
+                  </button>
+                </td>
+                <td>{{variable.label}}</td>
+                <td>{{variable.valid}}</td>
+                <td>{{variable.invalid}}</td>
+                <td>{{variable.min}}</td>
+                <td>{{variable.max}}</td>
+                <td>{{variable.mean}}</td>
+              </tr>
+              <tr [hidden]="selectedVariable != variable">
+                <td colspan="7">
+                  <variable-freq [variable]="selectedVariable"></variable-freq>
+                </td>
+              </tr>
+            </ng-container>
+          </tbody>
+        </table>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
