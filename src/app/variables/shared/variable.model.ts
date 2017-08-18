@@ -1,9 +1,4 @@
-export interface Code {
-  value: string;
-  label: string;
-  frequency: number;
-  barWidth: number;
-}
+import { Code } from './code.model'
 
 export interface Variable {
   name: string;

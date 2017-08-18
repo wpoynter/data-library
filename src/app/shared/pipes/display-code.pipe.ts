@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { Code } from './variable';
+import { Code } from '../../variable/shared/code.model';
 
 @Pipe({name: 'displayCodes'})
 

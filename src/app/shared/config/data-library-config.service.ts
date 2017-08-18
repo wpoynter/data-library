@@ -3,19 +3,19 @@ import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
 
-import { Study } from './study';
+import { DataLibraryConfig } from './data-library-config.model';
 
 @Injectable()
 
-export class StudyService {
-  private studiesUrl = 'assets/data.json';
+export class ConfigService {
+  private configUrl = 'assets/config.json';
 
   constructor(private http: Http) { }
 
-  getStudies(): Promise<Study[]> {
-    return this.http.get(this.studiesUrl)
+  getConfig(): Promise<DataLibraryConfig> {
+    return this.http.get(this.configUrl)
                .toPromise()
-               .then(response => response.json() as Study[])
+               .then(response => response.json() as DataLibraryConfig)
                .catch(this.handleError);
   }
 

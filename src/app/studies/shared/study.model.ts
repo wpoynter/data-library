@@ -1,8 +1,4 @@
-export class Sweep {
-  title: string;
-  desc: string;
-  pi: string;
-}
+import { Sweep } from '../../sweeps/shared/sweep.model'
 
 export class Study {
   title: string;

@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 
-import { Sweep } from './study'
-import { Variable } from './variable'
+import { Sweep } from './shared/sweep.model'
+import { Variable } from '../variables/shared/variable.model'
 
 @Component({
-  selector: 'sweep-detail',
-  templateUrl: './sweep-detail.component.html'
+  selector: 'sweep',
+  templateUrl: './sweep.component.html'
 })
 export class SweepDetailComponent {
   @Input() sweep: Sweep;

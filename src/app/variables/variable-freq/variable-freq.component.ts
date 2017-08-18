@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Variable } from './variable'
+import { Variable } from '../shared/variable.model'
 
 @Component({
   selector: 'variable-freq',
